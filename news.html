@@ -6,23 +6,9 @@
     <title>News</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../bananar/static/style.css">
-
+    <link rel="stylesheet" href="static/style1.css">
+</head>
     <style type="text/css">
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      #footer {
-        background-color:#00407a;
-        color:white;
-        clear:both;
-        text-align: right;
-          padding:5px;
-      }
       .card{
           border-radius: 20px;
       }
@@ -98,7 +84,7 @@
             font-size: 1.25rem;
             font-weight: bold;
         }
-      .content
+      .content1
       {
           position: fixed;
           top: 50%;
@@ -112,49 +98,24 @@
           width: 500px;
           max-width: 80%;
       }
-      #title
-      {
-          padding: 10px 15px;
-      }
     </style>
 </head>
-<body background="../bananar/static/img/hok8xi34p0y41.jpg" style="background-size: cover">
-<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:  #00407a">
-    <img src="../bananar/static/img/icon-2.pdf" height="80" width="80">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item ">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="intro.html">Intro </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="news.html">News<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link" href="project.html">project</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="contact.html" >Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-<br class="featurette-divider">
-<br class="featurette-divider">
-
+<body >
+    <header>
+        <a href="index.html" class="logo">BananAR</a>
+        <ul class="menu">
+          <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+          <li><a href="intro.html" onclick="toggleMenu();">Intro</a></li>
+          <li><a href="news.html" onclick="toggleMenu();">News</a></li>
+          <li><a href="project.html" onclick="toggleMenu();">Project</a></li>
+          <li><a href="contact.html" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+      </header>
+<section class="contact" id="contact">
 <div class="container bg-light "  id="blur">
-<div class="jumbotron p-4 p-md-5 text-white  bg-dark">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic">Augmented Sociality</h1>
-      <p class="lead my-3">Augmented Sociality is a rapidly growing field</p>
-    </div>
-</div>
-
+    <div class="heading">
+        <h2>Augmented Sociality News</h2>
+      </div>
     <div class="card1">
     <div class="row mb-2">
     <div class="col-md-4">
@@ -233,7 +194,7 @@
 </div>
 
 <div class="popup fixed-top" id='popup6'>
-			<div class="content">
+			<div class="content1">
                 <div class="modal-header">
                     <div class="modal-title font-weight-bold" ><h3> Overlay introduces Precision AR</h3></div>
                     <div class="close-button" onclick="hidder()">&times;</div>
@@ -250,8 +211,6 @@
 </div>
 
 
-
-
 		<script type="text/javascript">
 			document.getElementById('popup6').style.display="none";
 			function dianwo(){
@@ -262,13 +221,28 @@
 			}
 		</script>
 
-<div class="container" id="footer">
-    <form>
-        <a href="contact.html">contact us</a>
-    </form>
-</div>
+
+
 </div>
 
+
+</section>
+<div class="copyright">
+    <p>Copyright © 2020 Team Banana. All Right Reserved.</p>
+</div>
+<script type="text/javascript">
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    function toggleMenu(){
+      var menuToggle = document.querySelector('.toggle');
+      var menu = document.querySelector('.menu');
+      menuToggle.classList.toggle('active');
+      menu.classList.toggle('active');
+    }
+  </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

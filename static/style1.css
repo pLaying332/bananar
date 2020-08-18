@@ -69,7 +69,7 @@ section
 .content
 {
   display: flex;
-  justify-content: space-between;
+  
 }
 .heading
 {
@@ -195,6 +195,9 @@ section
 }
 .copyright
 {
+  display: flex;
+  flex-direction: column;
+  
   background: #000;
   color: #fff;
   text-align: center;
